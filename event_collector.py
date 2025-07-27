@@ -1,4 +1,3 @@
-# event_collector.py
 import logging
 import threading
 import time
@@ -8,7 +7,6 @@ from collections import deque
 from datetime import datetime
 import sseclient
 
-# Use the given variable name 'straem_url'
 straem_url = 'https://stream.wikimedia.org/v2/stream/revision-create'
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
