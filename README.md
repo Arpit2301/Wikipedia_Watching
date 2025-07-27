@@ -58,10 +58,17 @@ Every 1 minute, update the event buffer.
 
 Every 5 minutes, generate a domain-based report in your terminal.
 
-🐍 Python Dependencies
-Listed in requirements.txt:
-
+## 🐍 Python Dependencies
 requests
 sseclient-py
+
 Install with:
 pip install -r requirements.txt
+
+## ✨ Author
+Arpit Gupta
+🧠 Curious Coder | 🔧 Automation Enthusiast | 🚀 Always Learning
+
+🌐 GitHub
+
+💼 LinkedIn
