@@ -1,4 +1,3 @@
-# report_generator.py
 import time
 from datetime import datetime, timedelta
 from event_collector import event_buffer
