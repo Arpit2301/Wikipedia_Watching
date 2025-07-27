@@ -1,105 +1,61 @@
-# 📡 Wikipedia Watching
+# 📊 Wikipedia Watching
 
-This project connects to Wikipedia’s live event stream and watches for edit activity happening across different language domains (like English `en`, Hindi `hi`, French `fr`, etc.). It collects events every minute and generates user activity reports every 5 minutes.
-
----
-
-## ✅ Project Overview
-
-This tool performs two main tasks:
-
-1. **Collects Wikipedia Edit Events**  
-   - Every **1 minute**, it listens to Wikipedia’s live stream and stores recent edit events in a file.
-
-2. **Generates Reports**  
-   - Every **5 minutes**, it processes the collected events to generate a summary report.
-   - The report shows **how many edits each user made**, grouped by domain.
-
-You only need to run **one Python script**. Everything runs automatically in the background.
+This project listens to live edit events from Wikipedia using their EventStream API and generates a summary report every 5 minutes showing how many edits occurred per domain (e.g., en.wikipedia.org, fr.wikipedia.org) and how many were made by logged-in vs anonymous users.
 
 ---
 
-## 🗂 Folder & File Structure
+## 📁 Project Structure
+
 WikipediaWatching/
-├── event_collector.py       # Main file - runs the full program
-├── report_generator.py      # (Used internally) Generates the user edit report
-├── requirements.txt         # Python dependencies
-├── README.md                # You're reading this :)
-├── logs/                    # Stores log files (auto-created)
-├── data/                    # Stores event and report JSON files (auto-created)
+│
+├── event_collector.py # Collects real-time events and triggers report
+├── report_generator.py # Generates domain-wise edit reports
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
+
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Requirements
 
-### 1. Clone or Create Project Folder
+- Python 3.8 or above
+- Internet connection (to access the Wikipedia EventStream)
 
-You can name your folder `WikipediaWatching`.
+---
 
-### 2. Add These Files to It:
-- `event_collector.py`
-- `report_generator.py`
-- `requirements.txt`
-- `README.md` (this file)
+## 📦 Setup Instructions
 
-### 3. Create Virtual Environment (Optional but Recommended)
+1. **Clone or Download the Project Folder**
+   - You can manually create a folder named `WikipediaWatching` and paste all files inside it.
+   - Alternatively, use Git to clone (optional if you don't know Git):
+     ```bash
+     git clone https://github.com/your-username/WikipediaWatching.git
+     cd WikipediaWatching
+     ```
 
-```bash
-python -m venv venv
+2. **Create and Activate a Virtual Environment**  
+   *(Recommended but optional)*
+   ```bash
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
 
-### 4. Activate Virtual Environment
-On Windows:
+3. **Install Required Packages
+   pip install -r requirements.txt
 
-bash
-Copy
-Edit
-venv\Scripts\activate
-On Mac/Linux:
-
-bash
-Copy
-Edit
-source venv/bin/activate
-
-### 5. Install Required Packages
-bash
-Copy
-Edit
-pip install -r requirements.txt
-▶️ How to Run the Program
-Just run the main script:
+▶️ **How to Run the Project
+Just run the main file event_collector.py — it will automatically handle event collection and report generation.
 
 bash
 Copy
 Edit
 python event_collector.py
-Let it run in the terminal. It will:
+Leave it running. It will:
 
-Fetch Wikipedia events every 1 minute
+Continuously collect real-time edit events.
 
-Generate a report every 5 minutes
+Every 1 minute, update the event buffer.
 
-You’ll see log messages in the terminal and in the logs/ folder.
-
-### 📦 Output Files
-All data is saved automatically in the data/ folder:
-
-Raw Event Data:
-Saved every 1 minute as:
-events_YYYY-MM-DD_HH-MM.json
-
-Report Data:
-Saved every 5 minutes as:
-report_YYYY-MM-DD_HH-MM.json
-It contains:
-
-Domain (en, hi, etc.)
-
-Users and their edit count
-
-### 👨‍💻 Author
-
-Made with 💻 and ☕ by **Arpit Gupta**
-
-- 🐙 GitHub: [github.com/Arpit2301](https://github.com/Arpit2301)  
-- 💼 LinkedIn: [linkedin.com/in/arpit-gupta-081b68227](https://www.linkedin.com/in/arpit-gupta-081b68227)
+Every 5 minutes, generate a domain-based report in your terminal.
