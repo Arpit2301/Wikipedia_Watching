@@ -20,18 +20,13 @@ You only need to run **one Python script**. Everything runs automatically in the
 ---
 
 ## 🗂 Folder & File Structure
-
 WikipediaWatching/
-├── event_collector.py # Main program to run (handles both tasks)
-├── report_generator.py # Generates report (used internally by event_collector)
-├── requirements.txt # List of Python packages needed
-├── README.md # Project documentation (this file)
-├── data/ # Auto-created; contains all collected data and reports
-├── logs/ # Auto-created; contains log messages
-
-yaml
-Copy
-Edit
+├── event_collector.py       # Main file - runs the full program
+├── report_generator.py      # (Used internally) Generates the user edit report
+├── requirements.txt         # Python dependencies
+├── README.md                # You're reading this :)
+├── logs/                    # Stores log files (auto-created)
+├── data/                    # Stores event and report JSON files (auto-created)
 
 ---
 
