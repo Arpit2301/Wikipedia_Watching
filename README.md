@@ -28,29 +28,27 @@ WikipediaWatching/
 1. **Clone or Download the Project Folder**
    - You can manually create a folder named `WikipediaWatching` and paste all files inside it.
    - Alternatively, use Git to clone (optional if you don't know Git):
-     ```bash
+   
      git clone https://github.com/your-username/WikipediaWatching.git
      cd WikipediaWatching
      ```
 
 2. **Create and Activate a Virtual Environment**  
    *(Recommended but optional)*
-   ```bash
+
    python -m venv venv
    # On Windows:
    venv\Scripts\activate
    # On macOS/Linux:
    source venv/bin/activate
 
-3. **Install Required Packages
-   pip install -r requirements.txt
+## Install Required Packages
 
-▶️ **How to Run the Project
+pip install -r requirements.txt
+
+## ▶️ How to Run the Project
 Just run the main file event_collector.py — it will automatically handle event collection and report generation.
 
-bash
-Copy
-Edit
 python event_collector.py
 Leave it running. It will:
 
@@ -59,3 +57,11 @@ Continuously collect real-time edit events.
 Every 1 minute, update the event buffer.
 
 Every 5 minutes, generate a domain-based report in your terminal.
+
+🐍 Python Dependencies
+Listed in requirements.txt:
+
+requests
+sseclient-py
+Install with:
+pip install -r requirements.txt
