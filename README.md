@@ -46,7 +46,8 @@ You can name your folder `WikipediaWatching`.
 
 ```bash
 python -m venv venv
-4. Activate Virtual Environment
+
+### 4. Activate Virtual Environment
 On Windows:
 
 bash
@@ -59,7 +60,8 @@ bash
 Copy
 Edit
 source venv/bin/activate
-5. Install Required Packages
+
+### 5. Install Required Packages
 bash
 Copy
 Edit
@@ -79,7 +81,7 @@ Generate a report every 5 minutes
 
 You’ll see log messages in the terminal and in the logs/ folder.
 
-📦 Output Files
+### 📦 Output Files
 All data is saved automatically in the data/ folder:
 
 Raw Event Data:
@@ -95,7 +97,7 @@ Domain (en, hi, etc.)
 
 Users and their edit count
 
-## 👨‍💻 Author
+### 👨‍💻 Author
 
 Made with 💻 and ☕ by **Arpit Gupta**
 
