@@ -69,6 +69,7 @@ pip install -r requirements.txt
 Arpit Gupta
 🧠 Curious Coder | 🔧 Automation Enthusiast | 🚀 Always Learning
 
-🌐 GitHub
+🌐 [GitHub](https://github.com/Arpit2301)
 
-💼 LinkedIn
+💼 [LinkedIn](https://www.linkedin.com/in/arpit-gupta-081b68227)
+
